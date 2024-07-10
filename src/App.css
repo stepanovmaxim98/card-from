@@ -1,38 +1,277 @@
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type="submit"] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  background: url("./images/bg-main-desktop.png") no-repeat left,
+      linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  background-size: auto 100%; 
+  background-repeat: no-repeat;
+  background-position: left;
+  height: 100vh;
+  margin: 0;
+}
+
+legend {
+  display: block;
+}
 .App {
-  text-align: center;
+  width: 1120px;
+  margin: 0 auto;
+  padding: 0 25px;
+  padding-top: 150px;
+}
+.card-block {
+  position: relative;
+}
+.front-card {
+  background-image: url("./images/bg-card-front.png");
+  background-position: center / center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 25px 30px;
+  width: 450px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  position: absolute;
+  top: -20%;
+  
+}
+.decoration {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.big-circle {
+  width: 55px;
+  height: 55px;
+  background-color: #fff;
+  border-radius: 100%;
+}
+.small-circle {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+}
+.card-number {
+  font-size: 26px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-bottom: 22px;
+}
+.card-information {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  text-transform: uppercase;
+}
+.app-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.back-card {
+  background-image: url("./images/bg-card-back.png");
+  background-position: center / center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 450px;
+  height: 250px;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  position: absolute;
+  left: 60px;
+  top: 45%;
+}
+.cv-number {
+  color: #fff;
+  font-size: 22px;
+  position: absolute;
+  letter-spacing: 1px;
+  top: 44%;
+  left: 80%;
+}
+form {
+  max-width: 450px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form > label {
+  display: block;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #473c4d;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+form > input {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  color: #32223f;
+  border: 1px solid grey;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+.exp-data {
+  display: flex;
+}
+.input {
+  display: flex;
+  max-width: 200px;
+}
+.date-card {
+  display: flex;
+}
+.form-container {
+  display: flex;
+  justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-group {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex: 1;
+  margin-right: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.form-group:last-child {
+  margin-right: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.exp-date-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.exp-date-group .form-group {
+  margin-right: 5px;
+}
+
+.exp-date-group .form-group:last-child {
+  margin-right: 0;
+}
+.form-group > input {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  color: #32223f;
+  border: 1px solid grey;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+.form-group > label {
+  display: block;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #473c4d;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
